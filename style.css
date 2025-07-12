@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #007acc;
+}
+
+.mode-select button, #restart-btn {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.mode-select {
+  margin-bottom: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+  z-index: 1;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  background: white;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cell:hover {
+  background: #e0f7fa;
+}
+
+#status {
+  font-size: 18px;
+  margin: 10px;
+}
+
+#score {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.board-container {
+  position: relative;
+  display: inline-block;
+}
+
+.win-line {
+  position: absolute;
+  height: 5px;
+  background-color: #4caf50;
+  z-index: 2;
+  animation: growLine 0.4s ease-out forwards;
+  transform-origin: left center;
+}
+
+#restart-container {
+  margin-top: 20px;
+}
+
+.cell {
+  background-color: white;
+  border: 2px solid #ccc;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #ffeaea; /* Light red glow */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Light red shadow */
+}
+
+
+
+@keyframes growLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
