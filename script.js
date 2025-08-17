@@ -10,7 +10,7 @@ const scoreDiv = document.getElementById('score');
 const container = document.getElementById('game-container');
 
 // Sound Effects
-const winSound = new Audio('assets/click.mp3');
+const clickSound = new Audio('assets/click.mp3');
 const winSound = new Audio('assets/win.mp3');
 const drawSound = new Audio('assets/draw.mp3');
 const lossSound = new Audio('assets/loss.mp3');
@@ -229,4 +229,5 @@ function highlightWinningCells(combo) {
     cell.style.backgroundColor = currentPlayer === 'X' ? '#ffcccc' : '#ccffcc';
   });
 }
+
 
